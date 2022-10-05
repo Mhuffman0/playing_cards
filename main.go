@@ -4,42 +4,45 @@ import "fmt"
 
 func main() {
 
-	type Card_intf interface {
-		Read()
-	}
+	var card string = "Ace of Spades"
+	fmt.Println(card)
 
-	type face struct {
-		name  string
-		value int
-	}
+	// type Card_intf interface {
+	// 	Read()
+	// }
 
-	type card struct {
-		suit
-		face
-	}
+	// type face struct {
+	// 	name  string
+	// 	value int
+	// }
 
-	suits := map[string]string{
-		"diamonds": "red",
-		"hearts":   "red",
-		"clubs":    "black",
-		"spades":   "black",
-	}
+	// type card struct {
+	// 	suit
+	// 	face
+	// }
 
-	faces := map[string]int{
-		"ace":   1,
-		"two":   2,
-		"three": 3,
-		"four":  4,
-		"five":  5,
-		"six":   6,
-		"seven": 7,
-		"eight": 8,
-		"nine":  9,
-		"ten":   10,
-		"jack":  10,
-		"queen": 10,
-		"king":  10,
-	}
+	// suits := map[string]string{
+	// 	"diamonds": "red",
+	// 	"hearts":   "red",
+	// 	"clubs":    "black",
+	// 	"spades":   "black",
+	// }
+
+	// faces := map[string]int{
+	// 	"ace":   1,
+	// 	"two":   2,
+	// 	"three": 3,
+	// 	"four":  4,
+	// 	"five":  5,
+	// 	"six":   6,
+	// 	"seven": 7,
+	// 	"eight": 8,
+	// 	"nine":  9,
+	// 	"ten":   10,
+	// 	"jack":  10,
+	// 	"queen": 10,
+	// 	"king":  10,
+	// }
 	// for suit in suits:
 	// m := map[string]Animals{
 	//     "cow":   Animals{SuperAnimals{"walk"}, "grass", "moo"},
