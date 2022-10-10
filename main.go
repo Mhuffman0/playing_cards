@@ -4,11 +4,14 @@ import (
 	"fmt"
 )
 
-var cards [52]string
+var cards []string
 
 func main() {
 	BuildDeck()
-	fmt.Printf("%+q\n", cards)
+
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 }
 
 func BuildDeck() {
@@ -34,11 +37,10 @@ func BuildDeck() {
 		"queen": 10,
 		"king":  10,
 	}
-	i := 0
+
 	for suit := range suits {
 		for face := range faces {
-			cards[i] = fmt.Sprintf("%s of %s", face, suit)
-			i++
+			cards = append(cards, fmt.Sprintf("%s of %s", face, suit))
 		}
 
 	}
