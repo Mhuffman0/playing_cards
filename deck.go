@@ -1,9 +1,12 @@
 package main
 
+	
 import (
-	"fmt"
-	// "math/rand"
+    // "bufio"
+    "fmt"
+    // "os"
 	// "time"
+	// "math/rand"
 )
 
 // Create a new type of 'deck'
@@ -51,13 +54,11 @@ func (d deck) print() {
 	}
 }
 
+func deal(d deck, handsize int) (deck, deck) {
+	return d[:handsize], d[handsize:]
+}
+
 // func (d deck) shuffle() {
 // 	rand.Seed(time.Now().UnixNano())
 // }
 
-// func (d deck) deal(hand deck, card_number int) {
-// 	for i := range(card_number){
-
-// 	}
-
-// }
