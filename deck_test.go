@@ -1,12 +1,35 @@
 package main
 
-import "testing"
+import (
+	"testing"
+	// "fmt"
+	"golang.org/x/exp/slices"
+)
 
-func testBuildDeck(t *testing.T) {
+func TestBuildDeck(t *testing.T) {
 	cards := buildDeck()
 	if len(cards) != 52 {
 		t.Errorf("Expected deck length of 52, but got %d", len(cards))
 	}
+
+	included := make(map[string]bool)
+
+	for _, card := range cards {
+		included[card] = true
+	}
+
+	if len(included) != len(cards) {
+		t.Error("Non unique cards in deck.")
+	}
+
+	cardInDeck := func(card string) {
+		if slices.Contains(cards, card) != true {
+			t.Errorf("Deck does not contain %s", card)
+		}
+	}
+
+	cardInDeck("four of clubs")
+	cardInDeck("ace of spades")
 }
 
 // 	suits := map[string]string{
